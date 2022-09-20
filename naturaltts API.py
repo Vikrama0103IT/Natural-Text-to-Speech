@@ -9,17 +9,15 @@ from colorama import init
 from termcolor import colored
 
 init()
-art = text2art("Natural Text-to-Speech")
+art = text2art("Text-to-Speech")
 print(colored(art, "cyan"))
-print(colored("Developed By Henry Richard J", "blue"))
+print(colored("Developed By Vikram Kumar", "blue"))
 
 chunk_size = 1
 
 Voice_engine_table = [["Index", "Voice Type"],
                       ["1.", "Ivy Female US English"],
-                      ["2.", "Joanna Female US English"],
-                      ["3.", "Joey Male US English"],
-                      ["4.", "Justin Male US English"]]
+                      ["2.", "Justin Male US English"]]
 
 runner = cfscrape.create_scraper()
 session = Session()
@@ -78,16 +76,6 @@ def convert_To_Speech(message):
         gender = "Female"
 
     elif choice == 2:
-
-        voiceID = "Joanna"
-        gender = "Female"
-
-    elif choice == 3:
-
-        voiceID = "Joey"
-        gender = "Male"
-
-    elif choice == 4:
 
         voiceID = "Justin"
         gender = "Male"
